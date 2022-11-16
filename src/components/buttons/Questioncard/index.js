@@ -1,5 +1,6 @@
 import "./index.css"; 
 
+function QuestionCard({preguntaActual}){
 
     return(
         <div className="box">
@@ -9,14 +10,13 @@ import "./index.css";
             { 
                 preguntaActual.answers.map((opcion) => (
                     <div key={opcion.id}>
-                    <input type="radio" id="{`${opcion.id}`}" name="{opcion.id}" value={opcion.answer}></input>
-                    <label htmlFor="{`${opcion.id}`}">{opcion.answer}</label>
+                    <input type="radio" id={`${opcion.id}`} name={opcion.id} value={opcion.answer}></input>
+                    <label htmlFor={`${opcion.id}`}>{opcion.answer}</label>
                     </div>
                 ))
             }
             <br/>
         </div>
     )
-
-
-export default QuestionCard;
+        }
+    export default QuestionCard;
